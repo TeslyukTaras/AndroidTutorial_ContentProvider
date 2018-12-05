@@ -99,8 +99,9 @@ public class LogListAdapter extends BaseAdapter {
         return position;
     }
 
-    public void setSelectedItemPos(int position) {
-        //Logger.d(TAG,"setSelectedItemPos:"+position);
-        selectedItem = position;
+    public void onDataUpdate(List<LogModel> newData) {
+        list.clear();
+        list.addAll(newData);
+        notifyDataSetChanged();
     }
 }

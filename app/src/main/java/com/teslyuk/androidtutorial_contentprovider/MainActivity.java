@@ -70,12 +70,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Logger.d(TAG, "i:" + i + " name: " + logs.get(i).getMessage());
             }
         } else
-            logs = new ArrayList<LogModel>();
+            logs = new ArrayList<>();
 
-        adapter = new LogListAdapter(this, logs);
-        adapter.addListener(this);
-        fileListView.setAdapter(adapter);
-        adapter.notifyDataSetChanged();
+        if (adapter == null) {
+            adapter = new LogListAdapter(this, logs);
+            adapter.addListener(this);
+            fileListView.setAdapter(adapter);
+        } else {
+            adapter.onDataUpdate(logs);
+        }
     }
 
     @Override

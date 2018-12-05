@@ -38,7 +38,7 @@ public class LogDataBaseWrapper {
         List<LogModel> logItems = null;
 
         if (data != null && data.getCount() != 0) {
-            logItems = new ArrayList<LogModel>();
+            logItems = new ArrayList<>();
             if (data.moveToFirst()) {
                 do {
                     int id = data.getInt(data.getColumnIndex(TB_ID));
