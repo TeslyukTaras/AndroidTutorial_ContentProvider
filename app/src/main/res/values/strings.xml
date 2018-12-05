@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AndroidTutorial_ContentProvider</string>
+    <string name="app_read">com.teslyuk.android.androidtutorial.contentprovider.READ_DATABASE</string>
+    <string name="app_write">com.teslyuk.android.androidtutorial.contentprovider.WRITE_DATABASE</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="button_add">Add</string>
+</resources>
